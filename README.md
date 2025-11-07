@@ -75,36 +75,37 @@ work6/
 
 ---
 
-## 作业内容：知识库管理界面示例
-## Assignment: Knowledge Base Management Interface Example
-
-### 题目 / Title
-**知识库管理界面与智能问答系统演示**
-**Knowledge Base Management Interface and Intelligent Q&A System Demonstration**
+## 基于Cherry Studio的基础文献检索增强示例图片
+## Basic Literature Retrieval-Augmented Generation Examples Based on Cherry Studio
 
 ### 说明 / Description
 
-以下图片展示了本智能问答系统中的知识库管理界面和智能问答功能。用户可以在知识库管理界面上传、查看和管理文档，这些文档将作为RAG问答的知识来源。在智能问答界面中，系统能够从知识库中检索相关信息，并结合大语言模型生成高质量的回答。
+以下图片展示了基于Cherry Studio的基础文献检索增强生成（RAG）系统的实际运行效果。系统实现了知识库管理、智能问答和检索增强生成功能，能够从上传的文档中检索相关信息，并结合大语言模型生成高质量的回答。
 
-The images below illustrate the knowledge base management interface and intelligent Q&A functionality of this system. Users can upload, view, and manage documents in the knowledge base management interface, which serve as the knowledge source for RAG-based Q&A. In the intelligent Q&A interface, the system can retrieve relevant information from the knowledge base and generate high-quality answers combined with large language models.
+The images below demonstrate the actual operation of a basic literature Retrieval-Augmented Generation (RAG) system based on Cherry Studio. The system implements knowledge base management, intelligent Q&A, and retrieval-augmented generation functionality, capable of retrieving relevant information from uploaded documents and generating high-quality answers combined with large language models.
 
 ### 图片展示 / Image Display
 
-**注意** / **Note**: 请将系统运行截图添加到 `images/` 目录，并更新以下图片引用。
+#### 1. 知识库管理界面 / Knowledge Base Management Interface
 
-Please add system screenshots to the `images/` directory and update the image references below.
-
-```
-images/
-├── knowledge_base_interface.png    # 知识库管理界面
-├── qa_interface.png                # 智能问答界面
-└── ab_test_example.png             # A/B测试问答示例
-```
-
-示例图片引用格式 / Example image reference format:
-
-```markdown
 ![知识库管理界面](images/knowledge_base_interface.png)
+
+知识库管理界面允许用户上传、查看和管理文档。界面设计简洁，支持多种文档格式，文档会自动向量化并存储到向量数据库中。
+
+The knowledge base management interface allows users to upload, view, and manage documents. The interface is cleanly designed, supports multiple document formats, and documents are automatically vectorized and stored in the vector database.
+
+#### 2. 智能问答界面 / Intelligent Q&A Interface
+
 ![智能问答界面](images/qa_interface.png)
+
+智能问答界面提供了友好的对话交互体验。用户输入问题后，系统会从知识库中检索相关文档片段，并结合大语言模型生成回答，同时显示参考来源。
+
+The intelligent Q&A interface provides a friendly conversational interaction experience. After users input questions, the system retrieves relevant document fragments from the knowledge base and generates answers combined with large language models, while displaying reference sources.
+
+#### 3. A/B测试问答示例 / A/B Testing Q&A Example
+
 ![A/B测试问答示例](images/ab_test_example.png)
-```
+
+此示例展示了系统在处理A/B测试相关问题时，能够从知识库中检索到相关的文档内容，包括样本量计算、实验设计等详细信息，并生成结构化的回答。
+
+This example demonstrates that when processing A/B testing-related questions, the system can retrieve relevant document content from the knowledge base, including detailed information such as sample size calculation and experimental design, and generate structured answers.
