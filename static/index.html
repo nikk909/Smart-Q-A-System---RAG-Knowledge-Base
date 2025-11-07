@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>智能问答系统 - RAG知识库</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 头部 -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="title">🤖 智能问答系统</h1>
+                <p class="subtitle">基于RAG的本地知识库问答</p>
+            </div>
+            <div class="status-bar">
+                <div class="status-item" id="chroma-status">
+                    <span class="status-dot"></span>
+                    <span>ChromaDB</span>
+                </div>
+                <div class="status-item" id="ollama-status">
+                    <span class="status-dot"></span>
+                    <span>Ollama</span>
+                </div>
+                <div class="status-item" id="doc-count">
+                    <span>📄 文档: 0</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- 主内容区 -->
+        <main class="main-content">
+            <!-- 左侧：文档管理 -->
+            <aside class="sidebar">
+                <div class="sidebar-section">
+                    <h2 class="section-title">📚 文档管理</h2>
+                    <div class="upload-area" id="upload-area">
+                        <input type="text" id="doc-title" placeholder="文档标题" class="input-field">
+                        <textarea id="doc-content" placeholder="输入文档内容..." class="textarea-field"></textarea>
+                        <button id="upload-btn" class="btn btn-primary">上传文档</button>
+                    </div>
+                </div>
+                
+                <div class="sidebar-section">
+                    <h2 class="section-title">📋 文档列表</h2>
+                    <div class="doc-list" id="doc-list">
+                        <div class="empty-state">暂无文档</div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- 右侧：问答区 -->
+            <section class="chat-section">
+                <div class="chat-container">
+                    <div class="chat-messages" id="chat-messages">
+                        <div class="welcome-message">
+                            <div class="welcome-icon">💡</div>
+                            <h3>欢迎使用智能问答系统</h3>
+                            <p>基于RAG技术，我可以根据您上传的文档回答问题</p>
+                            <p class="hint">💬 在下方输入您的问题，我会从知识库中检索相关信息并生成回答</p>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-input-area">
+                        <div class="input-wrapper">
+                            <textarea 
+                                id="question-input" 
+                                placeholder="输入您的问题..." 
+                                class="question-input"
+                                rows="2"
+                            ></textarea>
+                            <button id="send-btn" class="btn btn-send">
+                                <span>发送</span>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="input-hint">
+                            <span>💡 提示：支持中文问答，系统会自动从知识库检索相关信息</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- 加载提示 -->
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="loading-spinner"></div>
+        <p>处理中...</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
