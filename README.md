@@ -88,8 +88,23 @@ work6/
 
 The images below illustrate the knowledge base management interface and intelligent Q&A functionality of this system. Users can upload, view, and manage documents in the knowledge base management interface, which serve as the knowledge source for RAG-based Q&A. In the intelligent Q&A interface, the system can retrieve relevant information from the knowledge base and generate high-quality answers combined with large language models.
 
-![知识库管理界面](image.png)
+### 图片展示 / Image Display
 
-![智能问答界面](image.png)
+**注意** / **Note**: 请将系统运行截图添加到 `images/` 目录，并更新以下图片引用。
 
-![A/B测试问答示例](image.png)
+Please add system screenshots to the `images/` directory and update the image references below.
+
+```
+images/
+├── knowledge_base_interface.png    # 知识库管理界面
+├── qa_interface.png                # 智能问答界面
+└── ab_test_example.png             # A/B测试问答示例
+```
+
+示例图片引用格式 / Example image reference format:
+
+```markdown
+![知识库管理界面](images/knowledge_base_interface.png)
+![智能问答界面](images/qa_interface.png)
+![A/B测试问答示例](images/ab_test_example.png)
+```
